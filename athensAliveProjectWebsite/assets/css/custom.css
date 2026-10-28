@@ -1,0 +1,437 @@
+/* ==========================================================================
+   Used Artificial Intelligence (Claude) to help develop the custom style guide to override theme.css
+
+   Palette 
+   - Blue   #2f91af  headings
+   - Orange #f45a2a  icons & subtext
+   - Beige  #f4e9d8  background
+   - Green  #8ccb5a  buttons & lines
+
+   Type
+   - Merriweather Sans, Semi Bold (600) for headings
+   - Merriweather Sans, Light (300) for body
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap');
+
+
+/* --------------------------------------------------------------------------
+   1. Brand tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Named brand colors: use these anywhere in new CSS */
+  --aa-blue: #2f91af;
+  --aa-blue-dark: #247590;
+  --aa-orange: #f45a2a;
+  --aa-beige: #f4e9d8;
+  --aa-green: #8ccb5a;
+  --aa-green-dark: #75b542;
+  --aa-ink: #2b2b2b;        /* body text */
+  --aa-ink-soft: #5b5348;   /* secondary text on beige */
+
+  /* The template's own switches */
+  --brand-primary: var(--aa-blue);
+  --brand-primary-darker: var(--aa-blue-dark);
+
+  /* Bootstrap-style variables the template defines */
+  --bs-primary: var(--aa-blue);
+  --bs-secondary: var(--aa-orange);
+  --bs-danger: var(--aa-orange);
+  --bs-success: var(--aa-green);
+  --bs-info: var(--aa-blue);
+  --bs-warning: var(--aa-orange);
+  --bs-light: var(--aa-beige);
+
+  --aa-font: "Merriweather Sans", "Poppins", -apple-system, BlinkMacSystemFont,
+             "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Page background and body text
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--aa-beige);
+  color: var(--aa-ink);
+  font-family: var(--aa-font);
+  font-weight: 300;
+}
+
+header {
+  background: var(--aa-beige);
+}
+
+/* Template's light grey-blue helper becomes brand beige (also catches the
+   navbar background that appears on scroll if it uses .bg-light) */
+.bg-light {
+  background-color: var(--aa-beige) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Typography
+   -------------------------------------------------------------------------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+.font-sans-serif,
+.font-base,
+.font-cursive,
+input, button, select, optgroup, textarea, label,
+.alert, .badge, .blockquote-footer, .btn, .navbar,
+.pagination, .valid-feedback, .invalid-feedback,
+.tooltip, .popover {
+  font-family: var(--aa-font);
+}
+
+/* Headings: Semi Bold, brand blue */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: var(--aa-blue);
+  font-weight: 600;
+}
+
+/* The template forces weights with utility classes (!important), which would
+   override the guide. Pull them back in line. */
+:is(h1, h2, h3, h4, h5, h6).fw-bold,
+:is(h1, h2, h3, h4, h5, h6).fw-medium,
+:is(h1, h2, h3, h4, h5, h6).fw-semi-bold {
+  font-weight: 600 !important;
+}
+
+p.fw-medium,
+span.fw-medium,
+li.fw-medium {
+  font-weight: 300 !important;   /* body = Semi Light */
+}
+
+.nav-link.fw-medium,
+.dropdown-item {
+  font-weight: 400 !important;   /* slightly heavier for readable nav */
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+/* Subtext: orange eyebrow above section titles ("Meet the", "Assignments") */
+h5.text-secondary {
+  color: var(--aa-orange) !important;
+  font-weight: 400;
+}
+
+/* Card titles and team names keep the heading color (blue) */
+h4.text-secondary,
+h3.text-secondary {
+  color: var(--aa-blue) !important;
+}
+
+/* Any other .text-secondary text (footer, copyright) uses a readable muted ink */
+.text-secondary {
+  color: var(--aa-ink-soft) !important;
+}
+
+/* Orange accent text (e.g. "The Special Events Collective is now...") */
+.text-danger {
+  color: var(--aa-orange) !important;
+}
+h4.text-danger {
+  font-weight: 600;
+}
+
+/* Hero title: brand blue, Merriweather Sans, green underline bar */
+.hero-title {
+  font-family: var(--aa-font);
+  font-weight: 700;
+  color: var(--aa-blue);
+  font-size: 2.4rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px)  { .hero-title { font-size: 3rem; } }
+@media (min-width: 1200px) { .hero-title { font-size: 3.6rem; } }
+@media (min-width: 1400px) { .hero-title { font-size: 4rem; } }
+
+.hero-title:before {
+  background-image: none;
+  background-color: var(--aa-green);
+  border-radius: 4px;
+  width: 6rem;
+  height: 5px;
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .hero-title:before { left: 0; transform: none; }
+}
+
+/* Green line under each centered section title, like the guide's
+   "Economic and Cultural Impact" heading */
+h3.font-cursive::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 4px;
+  margin: 0.85rem auto 0;
+  background-color: var(--aa-green);
+  border-radius: 4px;
+}
+.text-start > h3.font-cursive::after {
+  margin-left: 0;
+}
+
+
+/* --------------------------------------------------------------------
+   4. Links and navigation
+   -------------------------------------------------------------------- */
+a {
+  color: var(--aa-ink);
+}
+a:hover {
+  color: var(--aa-blue);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--aa-ink);
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--aa-blue);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--aa-beige);
+  color: var(--aa-blue);
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--aa-blue);
+  color: #fff;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Buttons: green, with dark text for readable contrast
+   -------------------------------------------------------------------------- */
+.btn-primary,
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: var(--aa-green);
+  border-color: var(--aa-green);
+  color: var(--aa-ink);
+  font-weight: 600;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: var(--aa-green-dark);
+  border-color: var(--aa-green-dark);
+  color: var(--aa-ink);
+}
+
+.btn-outline-primary {
+  color: var(--aa-ink);
+  border-color: var(--aa-green);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: var(--aa-green);
+  border-color: var(--aa-green);
+  color: var(--aa-ink);
+}
+
+/* Orange round "Play Demo" button */
+.btn-danger,
+.btn-danger:disabled,
+.btn-danger.disabled {
+  background-color: var(--aa-orange);
+  border-color: var(--aa-orange);
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+  background-color: #d94a1d;
+  border-color: #d94a1d;
+}
+
+.orange-gradient-btn {
+  background-image: none;
+  background-color: var(--aa-green);
+  color: var(--aa-ink);
+}
+.orange-gradient-btn:hover,
+.orange-gradient-btn:focus {
+  background-image: none;
+  background-color: var(--aa-green-dark);
+}
+
+.primary-btn-shadow {
+  box-shadow: 0 1.25rem 2.1875rem 0 rgba(140, 203, 90, 0.3);
+}
+.danger-btn-shadow {
+  box-shadow: 0 0.9375rem 1.875rem 0 rgba(244, 90, 42, 0.3);
+}
+
+/* Focus rings (the template defaults to gold) */
+.btn:focus,
+.btn-check:focus + .btn,
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus,
+.page-link:focus {
+  border-color: var(--aa-blue);
+  box-shadow: 0 0 0 0.25rem rgba(47, 145, 175, 0.25);
+}
+
+
+/* --------------------------------------------------------------------
+   6. Cards and decorative accents
+   -------------------------------------------------------------------- */
+/* Keep white cards so they lift off the beige background */
+.card {
+  background-color: #fff;
+}
+
+/* Corner shape behind Project Details cards */
+.card.service-card:before {
+  background-color: rgba(244, 90, 42, 0.2);
+}
+
+/* Deliverable cards are links, so keep their text from turning link-colored */
+a.text-decoration-none:hover .card {
+  box-shadow: 0 0.5rem 1.5rem rgba(47, 145, 175, 0.18) !important;
+}
+
+/* Footer */
+.footer-heading-color {
+  color: var(--aa-blue);
+}
+.icon-item {
+  color: var(--aa-ink);
+}
+
+/* Progress bars and carousel dots, if you keep them */
+.progress-bar {
+  background-color: var(--aa-green);
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--aa-blue);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Helper classes for the Visual Design Guide page
+   Use these in design-guide.html to show swatches and type samples.
+   -------------------------------------------------------------------------- */
+.bg-aa-blue   { background-color: var(--aa-blue)   !important; color: #fff; }
+.bg-aa-orange { background-color: var(--aa-orange) !important; color: #fff; }
+.bg-aa-beige  { background-color: var(--aa-beige)  !important; color: var(--aa-ink); }
+.bg-aa-green  { background-color: var(--aa-green)  !important; color: var(--aa-ink); }
+
+.text-aa-blue   { color: var(--aa-blue)   !important; }
+.text-aa-orange { color: var(--aa-orange) !important; }
+.text-aa-green  { color: var(--aa-green)  !important; }
+
+.swatch {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.type-heading-sample {
+  font-family: var(--aa-font);
+  font-weight: 600;
+}
+.type-body-sample {
+  font-family: var(--aa-font);
+  font-weight: 300;
+}
+
+/* Homepage: centered introduction over a soft brand gradient. */
+.aa-hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: clamp(9rem, 16vh, 12rem) 0 5rem;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(47, 145, 175, .30), transparent 58%),
+    radial-gradient(ellipse at 92% 8%, rgba(244, 90, 42, .24), transparent 55%),
+    radial-gradient(ellipse at 52% 25%, rgba(140, 203, 90, .24), transparent 58%),
+    linear-gradient(180deg, #f4e9d8 0%, #f4e9d8 100%);
+}
+.aa-hero-content {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+.aa-hero-eyebrow {
+  font-size: clamp(1.15rem, 2.4vw, 2rem);
+  font-weight: 600;
+  font-style: italic;
+}
+.hero-logo {
+  margin: 0;
+  line-height: 0;
+}
+.aa-hero .hero-logo img {
+  display: block;
+  width: min(100%, 880px);
+  max-width: 880px;
+  height: auto;
+  margin-inline: auto;
+}
+.aa-hero-tagline {
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  font-weight: 300;
+}
+.aa-hero-actions {
+  margin-top: 2rem;
+}
+.aa-hero-actions .btn-primary {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+@media (max-width: 575.98px) {
+  .aa-hero { min-height: auto; padding-top: 9rem; padding-bottom: 4rem; }
+  .aa-hero-content { padding-inline: 1.25rem; }
+}
+
+/* Smaller team layout */
+#team > .container {
+  max-width: 1100px;
+}
+
+/* Narrower cards and proportionally smaller images */
+#team .card {
+  width: 90%;
+  margin-inline: auto;
+}
+
+/* Reduce the space inside each card */
+#team .card-body {
+  padding: 1rem !important;
+}
+
+/* Smaller names */
+#team .card-body h4 {
+  font-size: 1.15rem;
+}
+
+/* Smaller role descriptions */
+#team .card-body .fs-0 {
+  font-size: 0.85rem !important;
+}
+
+/* Less space between the name and role */
+#team .card-body .mb-3 {
+  margin-bottom: 0.5rem !important;
+}

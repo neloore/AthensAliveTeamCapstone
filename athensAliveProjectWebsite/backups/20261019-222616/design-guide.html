@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Visual Design Guide | Athens Alive</title><meta name="description" content="Athens Alive logo usage, brand colors, typography, and visual asset downloads."><link rel="icon" href="assets/img/favicons/favicon.svg" type="image/svg+xml"><link href="assets/css/theme.css" rel="stylesheet"><link href="assets/css/custom.css" rel="stylesheet"><style>
+.vdg { --ink:#2b2b2b; color:var(--ink); font-size:16px; line-height:1.65; }
+.vdg * { box-sizing:border-box; }
+.vdg .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+.vdg .guide-nav { background:var(--aa-beige); border-bottom:1px solid #2b2b2b25; }
+.vdg .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-block:22px; flex-wrap:wrap; }
+.vdg .nav-links { display:flex; gap:20px; flex-wrap:wrap; }
+.vdg a { text-underline-offset:4px; }
+.vdg a:focus-visible { outline:3px solid var(--aa-blue); outline-offset:5px; }
+.vdg .intro { padding:80px 0 64px; background:radial-gradient(ellipse at 0 0,#2f91af30,transparent 60%),radial-gradient(ellipse at 100% 0,#f45a2a25,transparent 60%),var(--aa-beige); }
+.vdg .eyebrow { text-transform:uppercase; letter-spacing:.15em; font-size:13px; font-weight:600; }
+.vdg h1 { font-size:clamp(36px,6vw,64px); line-height:1.12; margin:12px 0 24px; font-weight:600; }
+.vdg h2 { font-size:clamp(28px,4vw,40px); line-height:1.2; margin:0 0 24px; }
+.vdg h3 { font-size:24px; line-height:1.3; margin:0 0 16px; }
+.vdg h4 { font-size:20px; line-height:1.4; }
+.vdg p { margin:0 0 18px; }
+.vdg .lead { max-width:760px; font-size:20px; }
+.vdg section { padding:64px 0; scroll-margin-top:24px; }
+.vdg .intro section { padding:0; }
+.vdg .chapter { border-bottom:1px solid #2b2b2b25; }
+.vdg .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.vdg .panel { border:1px solid #2b2b2b22; border-radius:20px; padding:28px; background:#fff8; }
+.vdg .logo-stage { min-height:220px; display:grid; place-items:center; padding:28px; border-radius:12px; margin-bottom:20px; background:var(--aa-beige); }
+.vdg .logo-stage.dark { background:#2b2b2b; color:var(--aa-beige); }
+.vdg .logo-stage img { max-width:100%; max-height:200px; width:auto; }
+.vdg .placeholder { border:1px dashed currentColor; padding:24px; text-align:center; width:100%; }
+.vdg .pending { display:inline-block; border:1px dashed #5b5348; padding:7px 12px; margin:4px 5px 4px 0; border-radius:8px; font-size:14px; color:#5b5348; }
+.vdg .note { font-size:14px; color:#5b5348; }
+.vdg .palette { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.vdg .chip { height:120px; border-radius:14px; border:1px solid #2b2b2b25; margin-bottom:16px; }
+.vdg .table-scroll { overflow-x:auto; }
+.vdg table { width:100%; border-collapse:collapse; min-width:620px; }
+.vdg th,.vdg td { text-align:left; padding:15px 12px; border-bottom:1px solid #2b2b2b30; vertical-align:top; }
+.vdg th { font-weight:600; color:var(--aa-blue); }
+.vdg .sample-heading { font-weight:600; font-size:32px; line-height:1.25; }
+.vdg .sample-body { font-weight:300; font-size:18px; }
+.vdg .sample-button { display:inline-block; background:var(--aa-orange); color:#191919; border:0; border-radius:10px; padding:14px 24px; font:600 16px var(--aa-font); text-decoration:none; }
+.vdg .accent-line { width:80px; height:4px; background:var(--aa-green); margin-bottom:24px; border-radius:4px; }
+.vdg footer { padding:32px 0; }
+@media(max-width:700px) { .vdg .grid { grid-template-columns:1fr; } .vdg .palette { grid-template-columns:repeat(2,minmax(0,1fr)); } .vdg section { padding:40px 0; } .vdg .intro { padding:48px 0; } .vdg .panel { padding:20px; } }
+@media print { .vdg .nav-links { display:none; } .vdg section { padding:24px 0; } .vdg .panel { break-inside:avoid; } .vdg h1 { font-size:32pt; } .vdg h2 { font-size:24pt; } .vdg { font-size:11pt; } }
+
+/* Reference-inspired presentation; all colors and type remain Athens Alive. */
+.vdg .guide-nav { border:0; }
+.vdg .guide-brand img { max-width:200px; height:auto; }
+.vdg .intro { text-align:center; padding:72px 0 80px; }
+.vdg .intro .lead { margin-inline:auto; }
+.vdg .intro .note { max-width:800px; margin-inline:auto; }
+.vdg .guide-tagline { font-size:24px; font-weight:600; }
+.vdg .intro h1 { font-size:clamp(38px,6vw,72px); }
+.vdg .panel { background:#fff; border:0; border-radius:28px; box-shadow:0 20px 45px rgba(43,43,43,.07); }
+.vdg .grid { gap:32px; }
+.vdg .palette { grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; margin-block:32px; }
+.vdg .palette article { overflow:hidden; background:#fff; border-radius:28px; box-shadow:0 20px 45px rgba(43,43,43,.07); }
+.vdg .palette .chip { height:240px; border:0; border-bottom:1px solid #2b2b2b15; border-radius:0; margin:0; }
+.vdg .palette h3 { margin:28px 28px 16px; }
+.vdg .palette p { margin:0 28px 32px; line-height:1.8; }
+.vdg #logos .grid:first-of-type .panel { text-align:center; padding:28px; }
+.vdg .logo-stage { min-height:280px; }
+.vdg .type-specimen { font-size:clamp(18px,2.4vw,28px); overflow-wrap:anywhere; line-height:1.6; padding-bottom:24px; border-bottom:1px solid #2b2b2b20; color:#2b2b2b; }
+.vdg .specimen-semibold { font-weight:600; }
+.vdg .specimen-light { font-weight:300; }
+@media(max-width:700px) {
+ .vdg .palette { grid-template-columns:1fr; }
+ .vdg .palette .chip { height:190px; }
+ .vdg .intro { padding:48px 0; }
+ .vdg .logo-stage { min-height:220px; }
+ .vdg .nav-links { gap:14px; }
+}
+
+/* Approved typography scale: px for screen, pt for print headings. */
+.vdg h1, .vdg .intro h1 { font-size:58px; overflow-wrap:anywhere; }
+.vdg h2, .vdg h3, .vdg h4, .vdg .sample-heading { font-size:32px; }
+.vdg, .vdg .lead, .vdg .sample-body { font-size:22px; }
+@media print {
+ .vdg h1, .vdg .intro h1 { font-size:58pt; }
+ .vdg h2, .vdg h3, .vdg h4, .vdg .sample-heading { font-size:32pt; }
+}
+
+/* Match the homepage navigation and leave room for its fixed position. */
+.vdg .navbar { font-size:1rem; line-height:1.5; }
+.vdg main { padding-top:140px; }
+
+.vdg .logo-downloads { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+.vdg .logo-downloads a { padding:10px 16px; border-radius:8px; background:var(--aa-orange); color:#191919; font-size:16px; font-weight:600; text-decoration:none; }
+.vdg .logo-downloads a:hover { text-decoration:underline; }
+.vdg #logos .logo-stage img { max-width:100%; width:277px; height:auto; }
+
+/* Center the introductory text column, with left-aligned paragraphs. */
+.vdg .intro .wrap > p:not(.eyebrow):not(.guide-tagline) {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+/* Visual guide page background. */
+body.vdg { background-color: #FDF8F1; }
+.vdg .intro { background-color: #FDF8F1; }
+.vdg .navbar { background-color: #FDF8F1; }
+.vdg .navbar.bg-light { background-color: #FDF8F1 !important; }
+</style></head>
+<body class="vdg"><nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/nmi/nmi-logo.svg" height="40" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
+              <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="index.html#details">Details</a></li>
+              <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="index.html#team">Team</a></li>
+              <!-- Probably don't need a button in the navbar, but here's one if you do <li class="nav-item px-3 px-xl-4"><a class="btn btn-outline-dark order-1 order-lg-0 fw-medium" href="#!">Sign Up</a></li> -->
+              <li class="nav-item dropdown px-3 px-xl-4"> <a class="d-inline-block ps-0 py-2 pe-3 text-decoration-none dropdown-toggle fw-medium" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Assignments</a>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg" style="border-radius:0.3rem;" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="index.html#checkpoint-one">Checkpoint One</a></li>
+                  <li><a class="dropdown-item" href="index.html#checkpoint-two">Checkpoint Two</a></li>
+                  <li><a class="dropdown-item" href="index.html#checkpoint-three">Checkpoint Three</a></li>
+                  <li><a class="dropdown-item" href="index.html#checkpoint-four">Checkpoint Four</a></li>
+                  <li><a class="dropdown-item" href="index.html#final-deliverables">Final Deliverables</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<main id="top"><div class="intro"><div class="wrap"><p class="eyebrow">Our visual identity</p><h1>Visual Design Guide</h1><p class="guide-tagline">Many Events. One Athens.</p><p class="lead">A shared visual language for Athens Alive: local landmarks, warm backgrounds, and lively color accents that bring our events together.</p></div></div>
+<section id="colors" class="chapter"><div class="wrap"><p class="eyebrow">01 / Palette</p><h2>Color with a purpose.</h2><div class="accent-line"></div><p>Beige creates a warm foundation. Blue organizes the hierarchy, orange highlights actions, and green adds energy through lines and supporting accents. The color specifications below follow our approved brand palette.</p><div class="palette"><article><div class="chip" style="background:#2F91AF"></div><h3>Backstage Blue</h3><p><strong>HEX: #2F91AF</strong><br>RGB: (47, 145, 175)<br>CMYK: (73%, 17%, 0%, 31%)</p><p>Headings and key titles.</p></article><article><div class="chip" style="background:#F45A2A"></div><h3>Outreach Orange</h3><p><strong>HEX: #F45A2A</strong><br>RGB: (244, 90, 42)<br>CMYK: (0%, 63%, 83%, 4%)</p><p>Icons and buttons.</p></article><article><div class="chip" style="background:#F4E9D8"></div><h3>Together Tan</h3><p><strong>HEX: #F4E9D8</strong><br>RGB: (244, 233, 216)<br>CMYK: (0%, 5%, 11%, 4%)</p><p>Primary background.</p></article><article><div class="chip" style="background:#8CCB5A"></div><h3>Gathering Green</h3><p><strong>HEX: #8CCB5A</strong><br>RGB: (140, 203, 90)<br>CMYK: (31%, 0%, 56%, 20%)</p><p>Lines and subtext accents.</p></article></div><article class="panel"><h3>Keep text readable</h3><p>Use dark ink (#2b2b2b) for paragraphs on beige. Keep orange and green primarily in shapes, icons, buttons, and decorative accents; use dark text for small labels. A green underline can support a subheading while its words remain dark. Use dark labels on orange buttons and a visible keyboard focus outline.</p></article></div></section>
+<section id="logos" class="chapter"><div class="wrap"><p class="eyebrow">02 / Identity</p><h2>One identity. Four logo variants.</h2><div class="accent-line"></div><p>The illustrated Athens skyline anchors the identity in a recognizable place. The distinctive wordmark gives the project a strong presence, while the long and short arrangements allow it to fit different spaces.</p><div class="grid"><article class="panel"><div class="logo-stage"><img src="assets/img/Branding/logoPNG/athensAliveLongBlackLogo.png" alt="Athens Alive long black logo" width="277" height="127" loading="lazy"></div><h3>Long logo · black</h3><p>Use in wide headers, banners, and horizontal layouts.</p><div class="logo-downloads"><a href="assets/img/Branding/logoPNG/athensAliveLongBlackLogo.png" download>Download PNG</a><a href="assets/img/Branding/logoJPG/athensAliveLongBlackLogo.jpg" download>Download JPG</a><a href="assets/img/Branding/athens-alive-logo-black.svg" download>Download SVG</a></div><p class="note" style="margin-top:16px">PNG and JPG: 277 × 127 px, solid background.</p></article><article class="panel"><div class="logo-stage"><img src="assets/img/Branding/logoPNG/athensAliveLongCreamLogo.png" alt="Athens Alive long beige / cream logo" width="277" height="127" loading="lazy"></div><h3>Long logo · beige / cream</h3><p>Use in wide headers, banners, and horizontal layouts.</p><div class="logo-downloads"><a href="assets/img/Branding/logoPNG/athensAliveLongCreamLogo.png" download>Download PNG</a><a href="assets/img/Branding/logoJPG/athensAliveCreamLongLogo.jpg" download>Download JPG</a></div><p class="note" style="margin-top:16px">PNG and JPG: 277 × 127 px, solid background.</p></article><article class="panel"><div class="logo-stage"><img src="assets/img/Branding/logoPNG/athensAliveCompactedBlackLogo.png" alt="Athens Alive short black logo" width="277" height="127" loading="lazy"></div><h3>Short logo · black</h3><p>Use in compact layouts and square placements when the full mark stays legible.</p><div class="logo-downloads"><a href="assets/img/Branding/logoPNG/athensAliveCompactedBlackLogo.png" download>Download PNG</a><a href="assets/img/Branding/logoJPG/athensAliveCompactedBlackLogo.jpg" download>Download JPG</a></div><p class="note" style="margin-top:16px">PNG and JPG: 277 × 127 px, solid background.</p></article><article class="panel"><div class="logo-stage"><img src="assets/img/Branding/logoPNG/athensAliveCompactedCreamLogo.png" alt="Athens Alive short beige / cream logo" width="277" height="127" loading="lazy"></div><h3>Short logo · beige / cream</h3><p>Use in compact layouts and square placements when the full mark stays legible.</p><div class="logo-downloads"><a href="assets/img/Branding/logoPNG/athensAliveCompactedCreamLogo.png" download>Download PNG</a><a href="assets/img/Branding/logoJPG/athensAliveCompactedCreamLogo.jpg" download>Download JPG</a></div><p class="note" style="margin-top:16px">PNG and JPG: 277 × 127 px, solid background.</p></article></div></div></section>
+<section id="typography" class="chapter"><div class="wrap"><p class="eyebrow">03 / Typography</p><h2>Merriweather Sans.</h2><div class="accent-line"></div><p>One type family keeps the identity consistent across web pages and supporting materials. Semibold headings create a clear hierarchy; light body text provides a softer contrast to the bold logo.</p><div class="grid"><article class="panel"><p class="type-specimen specimen-semibold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ! ?</p><h3>Headings / Semibold 600</h3><p class="sample-heading">Many Events.<br>One Athens.</p><a class="sample-button" href="assets/font/MerriweatherSans-SemiBold.ttf" download>Download heading font · Semibold</a></article><article class="panel"><p class="type-specimen specimen-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ! ?</p><h3>Body / Light 300</h3><p class="sample-body">Explore the events, places, and people that bring Athens together.</p><a class="sample-button" href="assets/font/MerriweatherSans-Light.ttf" download>Download body font · Light</a></article></div><h3 style="margin-top:32px">Typographic scale</h3><div class="table-scroll"><table><caption>Athens Alive type sizes</caption><thead><tr><th scope="col">Role</th><th scope="col">Size</th><th scope="col">Typeface</th><th scope="col">Weight</th></tr></thead><tbody><tr><td>Heading</td><td>58 px (web) / 58 pt (print)</td><td>Merriweather Sans</td><td>Semibold 600</td></tr><tr><td>Subheading</td><td>32 px (web) / 32 pt (print)</td><td>Merriweather Sans</td><td>Semibold 600</td></tr><tr><td>Body text</td><td>22 px</td><td>Merriweather Sans</td><td>Light 300</td></tr></tbody></table></div></div></section>
+<section id="components" class="chapter"><div class="wrap"><p class="eyebrow">04 / Application</p><h2>Put the pieces together.</h2><div class="accent-line"></div><div class="grid"><article class="panel"><h3>Buttons and accents</h3><p>Use orange for primary actions, a dark readable label, rounded corners, and generous spacing. Green lines provide a supporting accent.</p><a class="sample-button" href="#logos">View logos</a></article><article class="panel"><h3>Page rhythm</h3><p>Start with beige, introduce blue section headings, and use a restrained brand-color gradient in hero areas. Give logos and content room to breathe. Use a consistent spacing rhythm of 8, 16, 24, 32, 48, and 64 px.</p></article></div></div></section>
+</main><footer><div class="wrap"><strong>Athens Alive</strong> · Many Events. One Athens.<br><a href="index.html">Return to the project website</a> · <a href="#top">Back to top</a></div></footer><script src="vendors/@popperjs/popper.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/is/is.min.js"></script>
+<script src="assets/js/theme.js"></script></body></html>
